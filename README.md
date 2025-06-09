@@ -1,9 +1,9 @@
-# 🌌 3D Solar System Simulation
+# 3D Solar System Simulation
 
 This project is a simple 3D simulation of the solar system using OpenGL and GLUT.  
 We used basic transformations like rotation, translation, and scaling to animate the planets around the sun.
 
-## 🚀 Features
+## Features
 
 - Real-time orbit animation
 - Planets with different sizes, colors, and speeds
@@ -12,7 +12,7 @@ We used basic transformations like rotation, translation, and scaling to animate
 - Mouse drag to rotate the camera
 - Scroll to zoom in/out
 
-## 🛠 How we built it
+## How we built it
 
 We started by drawing spheres for each planet and updated their position using basic trigonometry.  
 We added orbits using line loops and used timer functions for smooth animation.  
@@ -21,4 +21,4 @@ The galaxy background was added using SOIL to load a texture.
 
 ## 🎥 Demo
 
-Video link:
+Video link: [Link](https://drive.google.com/file/d/1IZFoYlvxvLTBHqjpJF9Iw0yoBQ18nyGw/view?usp=sharing)
