@@ -1,24 +1,52 @@
 # 3D Solar System Simulation
 
-This project is a simple 3D simulation of the solar system using OpenGL and GLUT.  
-We used basic transformations like rotation, translation, and scaling to animate the planets around the sun.
+A 3D solar system built with **C++** and **OpenGL (GLUT)**. Watch planets orbit the Sun, Earth's moon spin, and take control with slick camera moves.
 
 ## Features
 
-- Real-time orbit animation
-- Planets with different sizes, colors, and speeds
-- Earth has a moon orbiting it
-- Galaxy background image using SOIL texture loading
-- Mouse drag to rotate the camera
-- Scroll to zoom in/out
+- Full planet: Sun, Mercury, Venus, Earth (+Moon), Mars, Jupiter, Saturn, Uranus, Neptune
+- Custom sizes, colors, and orbit distances for that real-space vibe
+- Mouse drag to rotate, scroll to zoom
+- Clean gray orbit paths for each planet
 
-## How we built it
+## How It's Built
 
-We started by drawing spheres for each planet and updated their position using basic trigonometry.  
-We added orbits using line loops and used timer functions for smooth animation.  
-For the 3D view, we added camera controls and zoom functionality.  
-The galaxy background was added using SOIL to load a texture.
+- Planets: Rendered with `glutSolidSphere`
+- Orbits: Drawn using `GL_LINE_LOOP`
+- Smooth animation using `GLUT` timer
+- Description: We started by drawing spheres for each planet and updated their position using basic trigonometry.  
+  We added orbits using line loops and used timer functions for smooth animation.  
+  For the 3D view, we added camera controls and zoom functionality.
 
 ## 🎥 Demo
 
-Video link: [Link](https://drive.google.com/file/d/1IZFoYlvxvLTBHqjpJF9Iw0yoBQ18nyGw/view?usp=sharing)
+Video link: [Link](https://drive.google.com/file/d/1wVAG7uFWU1ZrmZ7jmt463uhAOpxGASfa/view?usp=sharing)
+
+## Get It Running
+
+### Linux
+
+```bash
+sudo apt-get install g++ freeglut3-dev
+g++ -o solar_system solar_system.cpp -lGL -lGLU -lglut
+./solar_system
+```
+
+### macOS
+
+```bash
+xcode-select --install
+g++ -o solar_system solar_system.cpp -framework OpenGL -framework GLUT
+./solar_system
+```
+
+### Windows
+
+- Install MinGW with OpenGL and freeglut
+  Compile using:
+
+```bash
+g++ -o solar_system.exe solar_system.cpp -lglut32 -lopengl32 -lglu32
+```
+
+- Run solar_system.exe
